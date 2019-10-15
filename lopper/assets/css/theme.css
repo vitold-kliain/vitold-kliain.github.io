@@ -3273,7 +3273,7 @@ input[type="button"].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: transparent;
   background-clip: border-box;
   border: 1px solid #EAEDF2;
   border-radius: 0.3125rem; }
@@ -3289,7 +3289,8 @@ input[type="button"].btn-block {
 
 .card-body {
   flex: 1 1 auto;
-  padding: 2.25rem; }
+  padding: 2.25rem;
+  color: #FCFCFC; }
 
 .card-title {
   margin-bottom: 0.75rem; }
@@ -7417,28 +7418,32 @@ a.badge.badge-white {
   100% {
     transform: rotateZ(360deg); } }
 
-.card.bg-white {
-  border-color: rgba(0, 0, 0, 0);
-  background-color: rgba(255, 255, 255, 0.05) !important; }
-  .card.bg-white .card-footer {
-    border-color: rgba(255, 255, 255, 0.1); }
-
-.card-footer {
-  background-color: transparent; }
+.card {
+  cursor: pointer;
+  border-radius: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2); }
+  .card h5, .card .h5 {
+    color: #F61067; }
+  .card h3, .card .h3 {
+    color: #FCFCFC; }
+  .card.active, .card:hover {
+    background-color: #F61067;
+    border: none; }
+    .card.active h5, .card.active .h5, .card:hover h5, .card:hover .h5 {
+      color: #FCFCFC; }
 
 @media (max-width: 767.98px) {
   .card-body {
     padding: 1.5rem; } }
-
-a.card {
-  color: #150433;
-  font-weight: 400; }
 
 .bg-body-color {
   background: #150433; }
 
 .bg-purple {
   background-color: #5E239D; }
+
+.bg-purple-1 {
+  background-color: #30124E; }
 
 .text-pink {
   color: #F61067; }
